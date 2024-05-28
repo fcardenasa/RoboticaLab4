@@ -37,4 +37,8 @@ El laboratorio se llevó a cabo dese dos frentes, el primero, la programación e
 
 https://youtu.be/d_em7HzUAmo
 
+# Imagenes de la selección de opciones.
+
+![image]()
+
 ## MATLAB
