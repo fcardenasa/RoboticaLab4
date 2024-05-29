@@ -42,21 +42,27 @@ https://youtu.be/d_em7HzUAmo
 Imagen de la bienvenida y selección de posición del usuario.
 
 ![image](https://github.com/fcardenasa/RoboticaLab4/blob/main/fotoInicio.jpg)
+
 Imagen de las ángulos y errores medidos por el programa.
 
 ![image](https://github.com/fcardenasa/RoboticaLab4/blob/main/fotoMedidas.jpg)
+
 Imagen del mensaje de error entregado al no ser posible la conexión con el robot.
 
 ![image](https://github.com/fcardenasa/RoboticaLab4/blob/main/fotoError.jpg)
+
 Imagen de la posición de home.
 
 ![image](https://github.com/fcardenasa/RoboticaLab4/blob/main/foto1.jpg)
+
 Imagen de la posición 1.
 
 ![image](https://github.com/fcardenasa/RoboticaLab4/blob/main/foto2.jpg)
+
 Imagen de la posición 2.
 
 ![image](https://github.com/fcardenasa/RoboticaLab4/blob/main/foto3.jpg)
+
 Imagen de la posición 3.
 
 ![image](https://github.com/fcardenasa/RoboticaLab4/blob/main/foto4.jpg)
