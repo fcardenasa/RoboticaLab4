@@ -40,5 +40,7 @@ https://youtu.be/d_em7HzUAmo
 # Imagenes de la selección de opciones.
 
 ![image](https://github.com/fcardenasa/RoboticaLab4/blob/main/fotoError.jpg)
+![image](https://github.com/fcardenasa/RoboticaLab4/blob/main/fotoError.jpg)
+![image](https://github.com/fcardenasa/RoboticaLab4/blob/main/fotoError.jpg)
 
 ## MATLAB
