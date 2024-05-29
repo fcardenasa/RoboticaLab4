@@ -78,7 +78,7 @@ En esta sección del laboratorio, se plantea la matriz DH partiendo de la cinem�
 
 A partir de estos datos, se usa el toolboz de robótica SerialLink para crear el robot con parámetros DH. Los eslabones se crean a partir de la función link(theta,d,a,alpha), se le puede agregar dos parámetros adicionales, los cuales serán link(theta,d,a,alpha,1/0,offset) donde 1 será para articulación prismática mientras que 0 será para articulación rotacional. De igual manera, se establecen los límites espaciales de las juntas mediante la función qlim después de definir cada sistema de coordenadas. para este caso, se plantea la restricción entre [-pi,pi]. Por último, se puede definir la posición de la base del robot al usar la palabra 'base' dentro de la función SerialLink(), adicionalmente, se plantea la matriz de rotación desde el TCP con convención NOA hasta el sistema de coordenada de la última articulación para tener la configuración correcta de ejes.
 
-*La función phantom.plot() permite visualizar el robot phantom en la bse definida para el robot, mientras que la función phantom.teach() servirá para interactuar con el controlador del toolbox e indicar los parámetros q para que el robot se mueva en el espacio. A continuación, se anexa el código 
+* La función phantom.plot() permite visualizar el robot phantom en la bse definida para el robot, mientras que la función phantom.teach() servirá para interactuar con el controlador del toolbox e indicar los parámetros q para que el robot se mueva en el espacio. A continuación, se anexa el código 
 
 ![image](https://github.com/fcardenasa/RoboticaLab4/assets/124843458/9a9633c1-b42f-4dc1-afed-662f231ebe94)
 
@@ -87,6 +87,7 @@ A partir de estos datos, se usa el toolboz de robótica SerialLink para crear el
 ![image](https://github.com/fcardenasa/RoboticaLab4/assets/124843458/d8cdd838-9b70-44f8-8870-0f2f946251c7)
 
 ...
+
 clf;
 %PLOTEAR ROBOT Y CADENA CINEMÁTICA CON DH PARAMETERS STD
 %if prismatic joint theta=theta, d=0, offset=1, poner valor de d después de
@@ -119,6 +120,7 @@ base=eye(4,4)*H0201*H0302*H0403*Htcp04;
 
 %%ENSEÑAR AL ROBOT POSICIONES
 Rob.plot([0,pi/4,-pi/4,0])
+
 ...
 
 (https://github.com/fcardenasa/RoboticaLab4/assets/124843458/5a6554f6-8603-425c-8745-843383b19c88)
