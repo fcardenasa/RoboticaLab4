@@ -87,7 +87,7 @@ A partir de estos datos, se usa el toolboz de robótica SerialLink para crear el
 ![image](https://github.com/fcardenasa/RoboticaLab4/assets/124843458/d8cdd838-9b70-44f8-8870-0f2f946251c7)
 
 ...
-
+# Sección de código MATLAB
 clf;
 %PLOTEAR ROBOT Y CADENA CINEMÁTICA CON DH PARAMETERS STD
 %if prismatic joint theta=theta, d=0, offset=1, poner valor de d después de
