@@ -71,3 +71,9 @@ Imagen de la posición 4.
 ![image](https://github.com/fcardenasa/RoboticaLab4/blob/main/foto5.jpg)
 
 ## MATLAB
+
+En esta sección del laboratorio, se plantea la matriz DH partiendo de la cinemática inversa del Phantom X Pincher. A continuación, se presentan la tabla de parámetros DH obtenidos según la convención NOA:
+
+![WhatsApp Image 2024-05-28 at 22 23 37_6f9ce45e]
+
+(https://github.com/fcardenasa/RoboticaLab4/assets/124843458/5a6554f6-8603-425c-8745-843383b19c88)
