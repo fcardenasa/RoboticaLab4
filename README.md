@@ -74,7 +74,7 @@ Imagen de la posición 4.
 
 En esta sección del laboratorio, se plantea la matriz DH partiendo de la cinemática inversa del Phantom X Pincher. A continuación, se presentan la tabla de parámetros DH obtenidos según la convención NOA:
 
-![WhatsApp Image 2024-05-28 at 22 23 37_6f9ce45e]
+![image](https://github.com/fcardenasa/RoboticaLab4/assets/124843458/a3f1761d-89cf-4b1f-8e99-d619af42db5f)
 
 A partir de estos datos, se usa el toolboz de robótica SerialLink para crear el robot con parámetros DH. Los eslabones se crean a partir de la función link(theta,d,a,alpha), se le puede agregar dos parámetros adicionales, los cuales serán link(theta,d,a,alpha,1/0,offset) donde 1 será para articulación prismática mientras que 0 será para articulación rotacional. De igual manera, se establecen los límites espaciales de las juntas mediante la función qlim después de definir cada sistema de coordenadas. para este caso, se plantea la restricción entre [-pi,pi]. Por último, se puede definir la posición de la base del robot al usar la palabra 'base' dentro de la función SerialLink(), adicionalmente, se plantea la matriz de rotación desde el TCP con convención NOA hasta el sistema de coordenada de la última articulación para tener la configuración correcta de ejes.
 
@@ -94,7 +94,7 @@ clf;
 %offset
 %if revolute joint: theta=0, offset=0, después valor de theta
 %L(n)=Link([theta d r/a alpha])
-%PLOTEAR PARA ROBOT 4GDL
+%PLOTEAR PARA ROBOT 5GDL
 L1=Link([0 100 0 pi/2 0 0]);
 L1.qlim=[-pi pi];
 L2=Link([0 0 104.8 0 0 0]);
