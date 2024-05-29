@@ -39,8 +39,13 @@ https://youtu.be/d_em7HzUAmo
 
 # Imagenes de la selección de opciones.
 
+![image](https://github.com/fcardenasa/RoboticaLab4/blob/main/fotoInicio.jpg)
+![image](https://github.com/fcardenasa/RoboticaLab4/blob/main/fotoMedidas.jpg)
 ![image](https://github.com/fcardenasa/RoboticaLab4/blob/main/fotoError.jpg)
-![image](https://github.com/fcardenasa/RoboticaLab4/blob/main/fotoError.jpg)
-![image](https://github.com/fcardenasa/RoboticaLab4/blob/main/fotoError.jpg)
+![image](https://github.com/fcardenasa/RoboticaLab4/blob/main/foto1.jpg)
+![image](https://github.com/fcardenasa/RoboticaLab4/blob/main/foto2.jpg)
+![image](https://github.com/fcardenasa/RoboticaLab4/blob/main/foto3.jpg)
+![image](https://github.com/fcardenasa/RoboticaLab4/blob/main/foto4.jpg)
+![image](https://github.com/fcardenasa/RoboticaLab4/blob/main/foto5.jpg)
 
 ## MATLAB
