@@ -76,4 +76,49 @@ En esta sección del laboratorio, se plantea la matriz DH partiendo de la cinem�
 
 ![WhatsApp Image 2024-05-28 at 22 23 37_6f9ce45e]
 
+A partir de estos datos, se usa el toolboz de robótica SerialLink para crear el robot con parámetros DH. Los eslabones se crean a partir de la función link(theta,d,a,alpha), se le puede agregar dos parámetros adicionales, los cuales serán link(theta,d,a,alpha,1/0,offset) donde 1 será para articulación prismática mientras que 0 será para articulación rotacional. De igual manera, se establecen los límites espaciales de las juntas mediante la función qlim después de definir cada sistema de coordenadas. para este caso, se plantea la restricción entre [-pi,pi]. Por último, se puede definir la posición de la base del robot al usar la palabra 'base' dentro de la función SerialLink(), adicionalmente, se plantea la matriz de rotación desde el TCP con convención NOA hasta el sistema de coordenada de la última articulación para tener la configuración correcta de ejes.
+
+*La función phantom.plot() permite visualizar el robot phantom en la bse definida para el robot, mientras que la función phantom.teach() servirá para interactuar con el controlador del toolbox e indicar los parámetros q para que el robot se mueva en el espacio. A continuación, se anexa el código 
+
+![image](https://github.com/fcardenasa/RoboticaLab4/assets/124843458/9a9633c1-b42f-4dc1-afed-662f231ebe94)
+
+![image](https://github.com/fcardenasa/RoboticaLab4/assets/124843458/7772a639-9433-4383-aa2a-e0dd744cc19e)
+
+![image](https://github.com/fcardenasa/RoboticaLab4/assets/124843458/d8cdd838-9b70-44f8-8870-0f2f946251c7)
+
+...
+clf;
+%PLOTEAR ROBOT Y CADENA CINEMÁTICA CON DH PARAMETERS STD
+%if prismatic joint theta=theta, d=0, offset=1, poner valor de d después de
+%offset
+%if revolute joint: theta=0, offset=0, después valor de theta
+%L(n)=Link([theta d r/a alpha])
+%PLOTEAR PARA ROBOT 4GDL
+L1=Link([0 100 0 pi/2 0 0]);
+L1.qlim=[-pi pi];
+L2=Link([0 0 104.8 0 0 0]);
+L2.qlim=[-pi pi];
+L3=Link([0 0 104.8 0 0 0]);
+L3.qlim=[-pi pi];
+L4=Link([0 0 75.76 0 0 0]);
+L4.qlim=[-pi pi];
+%%Parámetros para SerialLink
+World=eye(4,4); %%Misma orientación con posición (0,0,0)
+Tool=[0 0 1 0; 1 0 0 0; 0 1 0 0; 0 0 0 1]; %Matriz Homog. herramienta
+Rob=SerialLink([L1 L2 L3 L4],'name',"PhantomII",'tool',Tool,'base',World)
+home=[0,0,0,0];
+Rob.plot(home); %%Interfaz gráfica del robot
+Rob.teach() %%Saca las variables de cada articulación para enseñar
+
+%MATRIZ HOMOGÉNEA DESDE TCP HASTA BASE
+Htcp04=DH(0,-90,75.76,0);
+H0403=DH(0,0,104.8,0);
+H0302=DH(0,0,104.8,0);
+H0201=DH(0,-90,0,100);
+base=eye(4,4)*H0201*H0302*H0403*Htcp04;
+
+%%ENSEÑAR AL ROBOT POSICIONES
+Rob.plot([0,pi/4,-pi/4,0])
+...
+
 (https://github.com/fcardenasa/RoboticaLab4/assets/124843458/5a6554f6-8603-425c-8745-843383b19c88)
